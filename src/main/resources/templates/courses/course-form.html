@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Save Course</title>
+</head>
+
+<body>
+
+	<div class="container">
+
+		<h3>Course Directory</h3>
+		<hr>
+
+		<p class="h4 mb-4">Save Course</p>
+
+		<form action="#" th:action="@{/courses/save}" th:object="${course}" method="POST">
+
+			<!-- Add hidden form field to handle update -->
+			<input type="hidden" th:field="*{id}" />
+
+      <div class="form-inline">
+        <input type="text" th:field="*{code}"
+               class="form-control mb-4 col-4" placeholder="Course Code">
+        <span th:if="${#fields.hasErrors('code')}"
+              th:errors="*{code}"
+              class="badge badge-danger ml-2 mb-4"></span>
+      </div>
+
+			<div class="form-inline">
+				<input type="text" th:field="*{courseTitle}"
+						class="form-control mb-4 col-4" placeholder="Course Title">
+
+				<!-- Add error message (if present) -->
+				<span th:if="${#fields.hasErrors('courseTitle')}"
+					  th:errors="*{courseTitle}"
+					  class="badge badge-danger ml-2 mb-4"></span>
+			</div>
+
+      <div class="form-inline">
+        <input type="text" th:field="*{maxCapacity}"
+            class="form-control mb-4 col-4" placeholder="Max Capacity">
+
+        <!-- Add error message (if present) -->
+        <span th:if="${#fields.hasErrors('maxCapacity')}"
+            th:errors="*{maxCapacity}"
+            class="badge badge-danger ml-2 mb-4"></span>
+      </div>
+
+      <div class="form-inline">
+        <input type="text" th:field="*{credit}"
+            class="form-control mb-4 col-4" placeholder="Credit">
+
+        <!-- Add error message (if present) -->
+        <span th:if="${#fields.hasErrors('credit')}"
+            th:errors="*{credit}"
+            class="badge badge-danger ml-2 mb-4"></span>
+      </div>
+
+      <div class="form-inline">
+        <input type="text" th:field="*{courseLevel}"
+            class="form-control mb-4 col-4" placeholder="Course Level">
+
+        <!-- Add error message (if present) -->
+        <span th:if="${#fields.hasErrors('courseLevel')}"
+            th:errors="*{courseLevel}"
+            class="badge badge-danger ml-2 mb-4"></span>
+      </div>
+
+      <div class="form-inline">
+        <input type="text" th:field="*{department}"
+            class="form-control mb-4 col-4" placeholder="Department">
+
+        <!-- Add error message (if present) -->
+        <span th:if="${#fields.hasErrors('department')}"
+            th:errors="*{department}"
+            class="badge badge-danger ml-2 mb-4"></span>
+      </div>
+
+      <div class="form-inline">
+        <input type="text" th:field="*{instructor}"
+            class="form-control mb-4 col-4" placeholder="Instructor">
+
+        <!-- Add error message (if present) -->
+        <span th:if="${#fields.hasErrors('instructor')}"
+            th:errors="*{instructor}"
+            class="badge badge-danger ml-2 mb-4"></span>
+      </div>
+
+			<button type="submit" class="btn btn-info col-2">Save</button>
+
+		</form>
+
+		<hr>
+		<a th:href="@{/courses/list}">Back to Courses List</a>
+
+	</div>
+</body>
+
+</html>
