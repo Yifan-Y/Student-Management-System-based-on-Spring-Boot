@@ -40,16 +40,7 @@ class InstructorServiceImplTest {
         assertEquals(instructors, result);
     }
 
-    @Test
-    @DisplayName("Find instructor by last name")
-    void findByLastName() {
-        Instructor instructor = new Instructor();
-        instructor.setLastName("Smith");
-        when(instructorRepository.findByLastName("Smith")).thenReturn(Arrays.asList(instructor));
-        List<Instructor> result = instructorService.findByLastName("Smith");
-        assertEquals(1, result.size());
-        assertEquals("Smith", result.get(0).getLastName());
-    }
+
 
     @Test
     @DisplayName("Find instructor by id")

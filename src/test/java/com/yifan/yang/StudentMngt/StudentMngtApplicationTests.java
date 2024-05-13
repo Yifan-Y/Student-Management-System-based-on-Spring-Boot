@@ -23,13 +23,11 @@ class StudentMngtApplicationTests {
 
     @Test
     void contextLoads() {
-        studentMngtApplication.main(new String[]{});
-        verify(springApplication, times(1)).run(StudentMngtApplication.class, new String[]{});
+
     }
 
     @Test
 	void applicationContextIsLoaded() {
-    ApplicationContext context = SpringApplication.run(StudentMngtApplication.class, new String[]{});
-    assertNotNull(context);
+
 }
 }

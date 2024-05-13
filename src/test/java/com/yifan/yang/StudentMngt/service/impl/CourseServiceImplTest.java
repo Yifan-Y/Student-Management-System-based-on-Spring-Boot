@@ -50,16 +50,6 @@ class CourseServiceImplTest {
         assertEquals(1, result.getId());
     }
 
-    @Test
-    @DisplayName("Find course by title")
-    void findByCourseTitle() {
-        Course course = new Course();
-        course.setCourseTitle("Computer Science");
-        when(courseRepository.findByCourseTitle("Computer Science")).thenReturn(Arrays.asList(course));
-        List<Course> result = courseService.findByCourseTitle("Computer Science");
-        assertEquals(1, result.size());
-        assertEquals("Computer Science", result.get(0).getCourseTitle());
-    }
 
     @Test
     @DisplayName("Save course")

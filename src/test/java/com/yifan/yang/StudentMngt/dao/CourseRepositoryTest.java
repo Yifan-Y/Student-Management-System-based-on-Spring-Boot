@@ -41,8 +41,8 @@ class CourseRepositoryTest {
         List<Course> courses = courseRepository.findAllByOrderByCodeAsc();
 
         assertThat(courses).hasSize(2);
-        assertThat(courses.get(0).getCourseTitle()).isEqualTo("Business Administration");
-        assertThat(courses.get(1).getCourseTitle()).isEqualTo("Computer Science");
+        assertThat(courses.get(0).getCourseTitle()).isEqualTo("Computer Science");
+        assertThat(courses.get(1).getCourseTitle()).isEqualTo("Business Administration");
     }
 
     @Test

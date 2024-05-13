@@ -26,10 +26,12 @@ class InstructorRepositoryTest {
     void setUp() {
         Instructor instructor1 = new Instructor();
         instructor1.setLastName("Smith");
+        instructor1.setGender("Male");
         entityManager.persist(instructor1);
 
         Instructor instructor2 = new Instructor();
         instructor2.setLastName("Johnson");
+        instructor2.setGender("Female");
         entityManager.persist(instructor2);
 
         entityManager.flush();

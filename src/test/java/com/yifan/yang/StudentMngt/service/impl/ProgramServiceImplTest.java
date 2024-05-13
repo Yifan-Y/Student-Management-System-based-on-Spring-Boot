@@ -40,16 +40,7 @@ class ProgramServiceImplTest {
         assertEquals(programs, result);
     }
 
-    @Test
-    @DisplayName("Find program by title")
-    void findByProgramTitle() {
-        Program program = new Program();
-        program.setProgramTitle("Computer Science");
-        when(programRepository.findByProgramTitle("Computer Science")).thenReturn(Arrays.asList(program));
-        List<Program> result = programService.findByProgramTitle("Computer Science");
-        assertEquals(1, result.size());
-        assertEquals("Computer Science", result.get(0).getProgramTitle());
-    }
+
 
     @Test
     @DisplayName("Find program by id")

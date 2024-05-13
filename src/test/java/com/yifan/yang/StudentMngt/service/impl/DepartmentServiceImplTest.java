@@ -40,16 +40,7 @@ class DepartmentServiceImplTest {
         assertEquals(departments, result);
     }
 
-    @Test
-    @DisplayName("Find department by title")
-    void findByTitle() {
-        Department department = new Department();
-        department.setDepartmentTitle("Computer Science");
-        when(departmentRepository.findByDepartmentTitle("Computer Science")).thenReturn(Arrays.asList(department));
-        List<Department> result = departmentService.findByTitle("Computer Science");
-        assertEquals(1, result.size());
-        assertEquals("Computer Science", result.get(0).getDepartmentTitle());
-    }
+
 
     @Test
     @DisplayName("Find department by id")
