@@ -58,6 +58,7 @@ The application is structured into three main layers:
 
 - [Java](https://www.java.com/) - The programming language used
 - [Spring Boot](https://spring.io/projects/spring-boot) - The web framework used
+- [Spring Security](https://spring.io/projects/spring-security) - Basic user authentication mechanism
 - [Maven](https://maven.apache.org/) - Dependency Management
 - [MySQL](https://www.mysql.com/) - Used for data persistence
 - [RESTful api](https://www.redhat.com/en/topics/api/what-is-a-rest-api) - Used for handling HTTP requests
